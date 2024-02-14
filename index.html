@@ -1,21 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signup Form</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="left">
-    <div class="logo_container">
-      <img src="assets/odin-lined.png" alt="odin logo" id="logo_img">
-      <p id="logo_text">ODIN</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="left">
+      <div class="logo_container">
+        <img src="assets/odin-lined.png" alt="odin logo" id="logo_img" />
+        <p id="logo_text">ODIN</p>
+      </div>
     </div>
-  </div>
 
-  <div class="right">
-    <p>This is not a real online service!</p>
-  </div>
-</body>
+    <div class="right">
+      <div class="paragraph">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams.
+        </p>
+        <p>Sign up <em>now</em> to get started.</p>
+        <p>You know you want to.</p>
+      </div>
+      <form action="/random" method="post">
+        <legend>Let's do this!</legend>
+        <div class="row">
+          <div class="col">
+            <label for="first_name">*FIRST NAME</label>
+            <input type="text" id="first_name" name="first_name" required />
+          </div>
+          <div class="col">
+            <label for="last_name">*LAST NAME</label>
+            <input type="text" id="last_name" name="last_name" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="email">*EMAIL</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="col">
+            <label for="phone">*PHONE NUMBER</label>
+            <input type="number" id="phone" name="phone" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="password_1">*PASSWORD</label>
+            <input
+              type="password"
+              id="password_1"
+              name="password_1"
+              minlength="8"
+              maxlength="12"
+              required
+            />
+          </div>
+          <div class="col">
+            <label for="password_2">*CONFIRM PASSWORD</label>
+            <input
+              type="password"
+              id="password_2"
+              name="password_2"
+              minlength="8"
+              maxlength="12"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <button type="submit" id="submit_button">Create Account</button>
+        </div>
+      </form>
+      <div class="bottom">
+        <p>Already have an account? <a href="www.google.com">Log in</a></p>
+      </div>
+    </div>
+  </body>
 </html>
